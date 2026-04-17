@@ -1,0 +1,98 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    background-color: #fdf6f0;
+    color: #4a3550;
+    line-height: 1.7;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 16px;
+}
+a { color: #c77dba; text-decoration: none; }
+a:hover { color: #f4a96a; }
+a:visited { color: #9b5db5; }
+h1 { font-family: 'Palatino Linotype', Palatino, serif; }
+.navbar {
+  position: sticky; 
+  top: 0;
+  z-index: 100;
+  background: rgba(253, 246, 240, 0.95);
+  border-bottom: 2px solid #e8b4e0;
+  height: 65px;
+}
+.nav-inner {
+  max-width: 1320px;
+  margin: 0 auto;         
+  padding: 0 24px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.nav-logo {
+  font-size: 20px;
+  font-weight: bold;
+  color: #c77dba;
+  font-family: 'Palatino Linotype', serif;
+}
+.nav-links {
+  list-style: none; 
+  display: flex;
+  gap: 6px;
+}
+.nav-links a {
+  display: inline-block;
+  padding: 7px 15px;
+  border-radius: 30px; 
+  font-weight: bold;
+  font-size: 11px;
+  color: #4a3550;
+  transition: background 0.2s, color 0.2s;
+}
+.nav-links a:hover,
+.nav-links a.active {
+  background: #c77dba;
+  color: #ffffff
+}
+.nav-links a:visited { color: #4a3550 }
+.nav-links a.active:visited,
+.nav-links a:hover { color: #ffffff; }
+.btn-primary {
+  display: inline-block;
+  padding: 11px 28px;
+  background: #c77dba;
+  color: #ffffff !important;
+  border-radius: 30px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+  box-shadow: 0 4px 14px rgba(199,125,186,0.3);
+}
+.btn-primary:hover {
+  background: #f4a96a;
+  transform: translateY(-2px);
+}
+.btn-secondary {
+  display: inline-block;
+  padding: 9px 24px;
+  background: transparent;
+  color: #c77dba!important;
+  border: 2px solid #c77dba;
+  border-radius: 30px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.btn-secondary:hover {
+  background: #c77dba;
+  color: #ffffff !important;
+}
+.section-title {
+  text-align: center;
+  font-size: 24px;
+  color: #c77dba;
+  margin-bottom: 32px;
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lama Adventures Home page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-inner">
+            <div class="nav-logo">🧌 Lama Infinity</div>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="characters.html">Characters</a></li>
+                <li><a href="world.html">World</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="slider-section">
+        <div class="slider" id="mainSlider">
+            <div class="slide active" style="background: linear-gradient(100deg, #fde8d8, #d4a8e8 60%, #a8c8f8);">
+                <div class="slide-content">
+                    <p class="slide-tag">✧ Now Available Free to Play ✧</p>
+                    <h1>Lama Infinity</h1>
+                    <p class="slide-sub">An open-world anime RPG where every horizon holds a new adventure.</p>
+                    <a href="about.html" class="btn-primary">Start Your Journey</a>
+                </div>
+            <div class="slide-art" aria-hidden="true">🌸🌸</div>
+        </div>
+
+        <div class="slide" style="background: linear-gradient(100deg, #d0eaff, #b8d4f8 50%, #e8d0ff);">
+            <div class="slide-content">
+                <p class="slide-tag">✧ Party Combat System ✧</p>
+                <h1>Form Your Party</h1>
+                <p class="slide-sub">Assemble a team of 4 heroes and defeat powerful monsters across the world.</p>
+                <a href="characters.html" class="btn-primary">Meet the Characters</a>
+            </div>
+            <div class="slide-art" aria-hidden="true">⚔️🤺</div>
+        </div>
+
+        <div class="slide" style="background: linear-gradient(100deg, #fff0d4, #ffd6a0 50%, #ffb8c8);">
+            <div class="slide-content">
+                <p class="slide-tag">✧ Gacha & Exploration ✧</p>
+                <h1>Pull & Explore</h1>
+                <p class="slide-sub">Pull for rare characters and weapons. Explore new areas and hidden treasures.</p>
+                <a href="world.html" class="btn-primary">Explore the World</a>
+            </div>
+            <div class="slide-art" aria-hidden="true">🎴🦸🏻</div>
+            </div>
+        </div>
+
+        <div class="slider-dots">
+            <span class="dot active" onclick="goToSlide(0)"></span>
+            <span class="dot"        onclick="goToSlide(1)"></span>
+            <span class="dot"        onclick="goToSlide(2)"></span>
+        </div>
+
+        <button class="slider-btn prev" onclick="changeSlide(-1)">&#8249;</button>
+        <button class="slider-btn next" onclick="changeSlide(1)">&#8250;</button>
+    </section>
+</body>
+</html>
