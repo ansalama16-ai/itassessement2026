@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lama Adventures Home page</title>
+    <title>Lama Legends-Home page</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <nav class="navbar">
         <div class="nav-inner">
-            <div class="nav-logo">🧌 Lama Infinity</div>
+            <div class="nav-logo">🧌 Lama Legends</div>
             <ul class="nav-links">
                 <li><a href="index.html" class="active">Home</a></li>
                 <li><a href="about.html">About</a></li>
@@ -22,46 +22,141 @@
     </nav>
 
     <section class="slider-section">
-        <div class="slider" id="mainSlider">
-            <div class="slide active" style="background: linear-gradient(100deg, #fde8d8, #d4a8e8 60%, #a8c8f8);">
-                <div class="slide-content">
-                    <p class="slide-tag">✧ Now Available Free to Play ✧</p>
-                    <h1>Lama Infinity</h1>
-                    <p class="slide-sub">An open-world anime RPG where every horizon holds a new adventure.</p>
-                    <a href="about.html" class="btn-primary">Start Your Journey</a>
-                </div>
-            <div class="slide-art" aria-hidden="true">🌸🌸</div>
+    <div class="slider" id="mainSlider">
+        <div class="slide active" style="background: linear-gradient(100deg, #fde8d8, #d4a8e8 60%, #a8c8f8);">
+            <div class="slide-content">
+                <p class="slide-tag">✧ Now Available Free to Play ✧</p>
+                <h1>Lama Legends</h1>
+                <p class="slide-sub">An open-world anime RPG where every horizon holds a new adventure.</p>
+                <a href="about.html" class="btn-primary">Start Your Journey</a>
+            </div>
+            <div class="slide-art">🌸🌸</div>
         </div>
 
         <div class="slide" style="background: linear-gradient(100deg, #d0eaff, #b8d4f8 50%, #e8d0ff);">
             <div class="slide-content">
                 <p class="slide-tag">✧ Party Combat System ✧</p>
                 <h1>Form Your Party</h1>
-                <p class="slide-sub">Assemble a team of 4 heroes and defeat powerful monsters across the world.</p>
+                <p class="slide-sub">Assemble a team of 4 heroes and defeat powerful monsters.</p>
                 <a href="characters.html" class="btn-primary">Meet the Characters</a>
             </div>
-            <div class="slide-art" aria-hidden="true">⚔️🤺</div>
+            <div class="slide-art">⚔️🤺</div>
         </div>
 
         <div class="slide" style="background: linear-gradient(100deg, #fff0d4, #ffd6a0 50%, #ffb8c8);">
             <div class="slide-content">
                 <p class="slide-tag">✧ Gacha & Exploration ✧</p>
                 <h1>Pull & Explore</h1>
-                <p class="slide-sub">Pull for rare characters and weapons. Explore new areas and hidden treasures.</p>
+                <p class="slide-sub">Pull for rare characters and explore hidden treasures.</p>
                 <a href="world.html" class="btn-primary">Explore the World</a>
             </div>
-            <div class="slide-art" aria-hidden="true">🎴🦸🏻</div>
-            </div>
+            <div class="slide-art">🎴🦸🏻</div>
+        </div>
+    </div>
+
+    <div class="slider-dots">
+        <span class="dot active" onclick="goToSlide(0)"></span>
+        <span class="dot" onclick="goToSlide(1)"></span>
+        <span class="dot" onclick="goToSlide(2)"></span>
+    </div>
+
+    <button class="slider-btn prev" onclick="changeSlide(-1)">&#8249;</button>
+    <button class="slider-btn next" onclick="changeSlide(1)">&#8250;</button>
+</section>
+
+<section class="features-section">
+    <h2 class="section-title">Why play Lama Legends?</h2>
+    <div class="features-grid">
+
+        <div class="feature-card">
+            <div class="feature-icon">🗺️</div>
+            <h3>Open World</h3>
+            <p>Freely roam a vast, anime-style world full of forests, deserts, and dungeons.</p>
         </div>
 
-        <div class="slider-dots">
-            <span class="dot active" onclick="goToSlide(0)"></span>
-            <span class="dot"        onclick="goToSlide(1)"></span>
-            <span class="dot"        onclick="goToSlide(2)"></span>
+        <div class="feature-card">
+            <div class="feature-icon">🎴</div>
+            <h3>Gacha System</h3>
+            <p>Pull for your favorite characters and legendary weapons. Every banner brings new possibilities</p>
         </div>
 
-        <button class="slider-btn prev" onclick="changeSlide(-1)">&#8249;</button>
-        <button class="slider-btn next" onclick="changeSlide(1)">&#8250;</button>
-    </section>
+        <div class="feature-card">
+            <div class="feature-icon">⚔️</div>
+            <h3>Party Combat</h3>
+            <p>Build a party of 4 and switch characters mid-battle. Master elemental combos to win.</p>
+        </div>
+
+        <div class="feature-card">
+            <div class="feature-icon">📈</div>
+            <h3>Adventure Rank</h3>
+            <p>Level up your rank to unlock harder challenges, better drops, and new regions.</p>
+        </div>
+
+        <div class="feature-card">
+            <div class="feature-icon">🎮</div>
+            <h3>Multi-Platform</h3>
+            <p>Play on PC, console, or mobile. Your progress will sync acress all devices.</p>
+        </div>
+
+       <div class="feature-card">
+            <div class="feature-icon">💎</div>
+            <h3>Free to play</h3>
+            <p>Completely free to download. Earn premium currency just by exploring and completing quests.</p>
+        </div> 
+    </div>
+</section>
+
+<section class="table-section">
+    <h2 class="section-title">Platform Availability</h2>
+    <div class="table-wrapper">
+        <table class="styled-table">
+            <thead>
+                <tr>
+                    <th rowspan="2">Platform</th>
+                    <th colspan="3">Features Supported</th>
+                    <th rowspan="2">Release Status</th>
+                </tr>
+                <tr>
+                    <th>Cross-Save</th>
+                    <th>Co-Op</th>
+                    <th>Controller</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>🖥️ PC (Windows/Mac)</td>
+                    <td>✅</td><td>✅</td><td>✅</td>
+                    <td><span class="badge green">Available</span></td>
+                </tr>
+                 <tr>
+                    <td>🎮 PlayStation 5</td>
+                    <td>✅</td><td>✅</td><td>✅</td>
+                    <td><span class="badge green">Available</span></td>
+                </tr> 
+                <tr>
+                    <td>🟩 Xbox Series X</td>
+                    <td>✅</td><td>✅</td><td>✅</td>
+                    <td><span class="badge yellow">Coming Soon</span></td>
+                </tr> 
+                <tr>
+                    <td>📱 iOS</td>
+                    <td>✅</td><td>⚡️ Limited</td><td>❌</td>
+                    <td><span class="badge green">Available</span></td>
+                </tr> 
+                <tr>
+                    <td>🤖 Android</td>
+                    <td>✅</td><td>⚡️ Limited</td><td>❌</td>
+                    <td><span class="badge green">Available</span></td>
+                </tr>       
+                <tr>
+                    <td colspan="5" style="text-align: center; font-style: italic; color: #a08090;">
+                        All platforms share the same game world and servers.
+                    </td>
+                </tr>         
+            </tbody>
+        </table>
+    </div>
+</section>
+<script src="main.js"></script>
 </body>
 </html>
