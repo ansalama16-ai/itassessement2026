@@ -20,14 +20,120 @@
             </ul>
         </div>
     </nav>
+
+    <section class="page-hero">
+        <h1>Gallery</h1>
+        <p>Explore characters, regions, and game visuals from Lama Legends.</p>
+    </section>
+
+    <div class="page-container">
+        <h2 class="section-title">⭐️ Characters</h2>
+        <div class="gallery-grid">
+
+            <div class="gallery-item" onclick="openLight('images/Aiden Flare.jpeg','Aiden Flare','Pyro warrior with blazing sword.')">
+                <img src="images/Aiden Flare.jpeg">
+                <div class="gallery-overlay">Aiden Flare</div>
+            </div>
+            <div class="gallery-item" onclick="openLight('images/Sera Tide.jpeg','Sera Tide','Ocean priestess with healing waves.')">
+                <img src="images/Sera Tide.jpeg">
+                <div class="gallery-overlay">Sera Tide</div>
+            </div>
+            <div class="gallery-item" onclick="openLight('images/Kaito Storm.jpeg','Kaito Storm','Electro archer with lightning speed.')">
+                <img src="images/Kaito Storm.jpeg">
+                <div class="gallery-overlay">Kaito Storm</div>
+            </div>
+            <div class="gallery-item" onclick="openLight('images/Lyra Frost.png','Lyra Frost','Cryo mage freezing battlefields.')">
+                <img src="images/Lyra Frost.png">
+                <div class="gallery-overlay">Lyra Frost</div>
+            </div>
+            
+        </div>
+
+        <h2 class="section-title" style="margin-top: 40px;">🌎 Regions</h2>
+        <div class="gallery-grid">
+
+            <div class="gallery-item" onclick="openLight('images/auryn plains.jpg','Auryn Plains','Golden starting region.')">
+                <img src="images/auryn plains.jpg">
+                <div class="gallery-overlay">Auryn Plains</div>
+            </div>
+            <div class="gallery-item" onclick="openLight('images/verdant forest.jpg','Verdant Forest','Ancient glowing forest.')">
+                <img src="images/verdant forest.jpg">
+                <div class="gallery-overlay">Verdant Forest</div>
+            </div>
+            <div class="gallery-item" onclick="openLight('images/searing sand.jpg','Searing Sands','Scorching desert lands.')">
+                <img src="images/searing sand.jpg">
+                <div class="gallery-overlay">Searing Sands</div>
+            </div>
+            <div class="gallery-item" onclick="openLight('images/snowy peaks.jpg','Crystalpeak Mountains','Frozen dragon peaks.')">
+                <img src="images/snowy peaks.jpg">
+                <div class="gallery-overlay">Crystalpeak Mountains</div>
+            </div>
+            <div class="gallery-item" onclick="openLight('images/azure shores.jpg','Azure Shores','Beautiful ocean coasts.')">
+                <img src="images/azure shores.jpg">
+                <div class="gallery-overlay">Azure Shores</div>
+            </div>
+            <div class="gallery-item" onclick="openLight('images/stormveil highland.jpg','Stormveil Highland','Endless lightning storms.')">
+                <img src="images/stormveil highland.jpg">
+                <div class="gallery-overlay">Stormveil Highland</div>
+            </div>
+        </div>
+
+        <h2 class="section-title" style="margin-top: 40px;">🎮 Game Screenshots</h2>
+        <div class="gallery-grid">
+
+            <div class="gallery-item" onclick="openLight('images/lama_legends_1.png','World Preview 1','Official game artwork preview.')">
+                <img src="images/lama_legends_1.png">
+                <div class="gallery-overlay">Preview 1</div>
+            </div>
+            <div class="gallery-item" onclick="openLight('images/lama_legends_2.png','World Preview 2','Adventure across magical lands.')">
+                <img src="images/lama_legends_2.png">
+                <div class="gallery-overlay">Preview 2</div>
+            </div>
+            <div class="gallery-item" onclick="openLight('images/lama_legends_3.png','World Preview 3','Epic battles and exploration.')">
+                <img src="images/lama_legends_3.png">
+                <div class="gallery-overlay">Preview 3</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="lightbox" id="lightbox" onclick="closeLight(event)">
+        <div class="lightbox-box">
+            <span class="lightbox-close" onclick="closeLightDirect()">x</span>
+            <img id="lbImg">
+            <h3 id="lbTitle"></h3>
+            <p id="lbDesc"></p>
+        </div>
+    </div>
+
+    <script>
+        function openLight(img, title, desc){
+            document.getElementById("lbImg").src = img;
+            document.getElementById("lbTitle").innerText = title;
+            document.getElementById("lbDesc").innerText = desc;
+            document.getElementById("lightbox").classList.add("open");
+        }
+
+       function closeLight(e){
+        if (e.target.id === "lightbox"){
+            document.getElementById("lightbox").classList.remove("open");
+        }
+       } 
+
+       function closeLightDirect(){
+        document.getElementById("lightbox").classList.remove("open");
+       }
+    </script>
+
     <div class="secondary-nav">
         <a href="index.html">Home</a><span>|</span>
         <a href="about.html">About</a><span>|</span>
         <a href="characters.html">Characters</a><span>|</span>
         <a href="world.html">World</a><span>|</span>
         <a href="gallery.html">Gallery</a><span>|</span>
-        <a href="contact.html">Contact</a><span>|</span>
+        <a href="contact.html">Contact</a>
     </div>
+
+
 
     <footer class="site-footer">
         <div class="footer-inner">
