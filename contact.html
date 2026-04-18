@@ -20,6 +20,111 @@
             </ul>
         </div>
     </nav> 
+
+    <section class="page-hero">
+        <h1>Contact Us</h1>
+        <p>Have a question, found a bug, or want to share fan art? We'd love to hear from you!</p>
+    </section>
+
+    <div class="page-container">
+        <div class="contact-grid">
+
+            <div class="contact-info">
+                <h2>Get in Touch</h2>
+                <p>Our team is online everyday. We read every message!</p>
+
+                <div class="info-team">
+                    <span>📧</span>
+                    <span>Email: <a href="mailto:support@lamalegends.game" class="email-link">support@lamalegends.game</a></span>
+                </div>
+                <div class="info-item">
+                    <span>📍</span>
+                    <span>Lama Studios<br>Lalitpur, Bagmati Province<br>Nepal</span>
+                </div>
+                <div class="info-item">
+                    <span>🕐</span>
+                    <span>Response time: within 24-48 hours</span>
+                </div>
+                <div class="info-item">
+                    <span>🌐</span>
+                    <span>Community: <a href="https://www.reddit.com/r/JRPG/" target="_blank">r/JRPG on Reddit ↗</a></span>
+                </div>
+
+                <div class="info-box" style="margin-top: 24px;">
+                    <h3>📋 Support Topics</h3>
+                    <table>
+                        <tr><td>Bug Reports</td>  <td>In-game issues</td></tr>
+                        <tr><td>Account Help</td>  <td>Login, password, data</td></tr>
+                        <tr><td>Gacha Queries</td>  <td>Pity, pulls, currency</td></tr>
+                        <tr><td>Fan Art</td>  <td>Submissions welcome!</td></tr>
+                        <tr><td>Press / Media</td>  <td>Partnership enquiries</td></tr>
+                    </table>
+                </div>
+            </div>
+
+            <div class="contact-form-box">
+                <h2>Send a message</h2>
+
+                <div id="contactForm">
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="fname">First Name *</label>
+                            <input type="text" id="fname" placeholder="eg. Aiden">
+                            <div class="error-msg" id="fnameError"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="lname">Last Name *</label>
+                            <input type="text" id="lname" placeholder="eg. Flare"/>
+                            <div class="error-msg" id="lnameError"></div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" placeholder="you@example.com">
+                        <div class="error-msg" id="emailError"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="platform">Your Platform *</label>
+                        <select id="platform">
+                            <option value="">-Select your platform -</option>
+                            <option value="pc">🖥️ PC (Windows/Mac)</option>
+                            <option value="ps5">🎮 PlayStation 5</option>
+                            <option value="xbox">🟩 Xbox Series X</option>
+                            <option value="ios">📱 iOS</option>
+                            <option value="android">🤖 Android</option>
+                        </select>
+                        <div class="error-msg" id="platformError"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="adventureRank">Adventure Rank (optional, 1-60)</label>
+                        <input type="number" id="adventureRank" placeholder="eg. 35" min="1" max="60">
+                        <div class="error-msg" id="adventureRankError"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Your message *</label>
+                        <textarea id="message" rows="5" placeholder="Describe your question, bug, or feedback..."></textarea>
+                        <div class="error-msg" id="messageError"></div>
+                    </div>
+
+                    <button type="button" class="btn-primary" onclick="submitContactForm()" style="width: 100%;">
+                        Send Message ✉️
+                    </button>
+                </div>
+
+                <div class="form-success" id="formSuccess">
+                    <div class="success-icon">🎉</div>
+                    <h3>Message Sent!</h3>
+                    <p>Thank you for reaching out! We'l get back to you within 24-48 hours. Happy gaming! 🧌</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div class="secondary-nav">
         <a href="index.html">Home</a><span>|</span>
         <a href="about.html">About</a><span>|</span>
@@ -59,5 +164,63 @@
         </div>
     </footer>
     <script src="main.js"></script>
+
+    <script>
+        function submitContactForm() {
+            let valid = true;
+
+            function setError(fieldId, msgId, message){
+                const field = document.getElementById(fieldId);
+                const msg = document.getElementById(msgId);
+
+                if (!message){
+                    field.classList.remove('error');
+                    msg.style.display = 'none';
+                    msg.textContent = '';
+                } else {
+                    field.classList.add('error');
+                    msg.style.display = 'block';
+                    msg.textContent = message;
+                    valid = false;
+                }
+            }
+
+            ['fname','lname','email','platform','adventureRank','message'].forEach(id => {
+                const f = document.getElementById(id);
+                const m = document.getElementById(id + 'Error');
+                if (f) f.classList.remove('error');
+                if (m) { m.style.display = 'none'; m.textContent = ''; }
+            });
+
+            const fname = document.getElementById('fname').value.trim();
+            if (!fname) setError('fname','fnameError','Please enter your first name.');
+            else if (fname.length < 2) setError('fname','fnameError','Name must be at least 2 characters.');
+
+            const lname = document.getElementById('lname').value.trim();
+            if (!lname) setError('lname','lnameError','Please enter your last name.');
+
+            const email = document.getElementById('email').value.trim();
+            const emailOK = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // email pattern
+            if (!email) setError('email','emailError','Please enter your email.');
+            else if (!emailOK.test(email)) setError('email','emailError','Please enter a valid email.');
+
+            const platform = document.getElementById('platform').value;
+            if (!platform) setError('platform','platformError','Please select your platform.');
+
+            const rank = document.getElementById('adventureRank').value;
+            if (rank !== '' && (isNaN(rank) || rank < 1 || rank > 60)) {
+                setError('adventureRank','adventureRankError','Must be between 1 and 60.');
+            }
+
+            const message = document.getElementById('message').value.trim();
+            if (!message)                 setError('message','messageError','Please write a message.');
+            else if (message.length < 10) setError('message','messageError','Message must be at least 10 characters.');
+
+            if (valid) {
+                document.getElementById('contactForm').style.display  = 'none';
+                document.getElementById('formSuccess').style.display  = 'block';
+            }
+    }
+    </script>
 </body>
 </html>
